@@ -2,7 +2,7 @@ const add = (a: number, b:number): number => {
   return a + b;
 }
 
-const substract = (a: number, b:number): number => {
+const subtract = (a: number, b:number): number => {
   return a - b;
 }
 
@@ -41,9 +41,9 @@ const todaysWeather = {
   weather: 'sunny',
 };
 
-const logWeather = (forcasts: {date: Date, weather: string}): void => {
-  console.log(forcasts.date);
-  console.log(forcasts.weather);
+const logWeather = (forecasts: {date: Date, weather: string}): void => {
+  console.log(forecasts.date);
+  console.log(forecasts.weather);
 }
 
 logWeather(todaysWeather);

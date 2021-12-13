@@ -50,7 +50,7 @@ for (let i = 0; i < words.length; i++) {
 }
 
 // (3) variable whose type can not be inferred correctly
-const numbers = [-2, -15; 12];
+const numbers = [-2, -15, 12];
 let aboveZero: number | boolean = false;
 
 for(let i=0; i < numbers.length; i++) {
