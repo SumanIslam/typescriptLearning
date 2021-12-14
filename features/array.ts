@@ -11,9 +11,17 @@ const car = carMakers1[0];
 const myCar = carMakers1.pop();
 
 // prevent adding incompatible values to array
-carMakers1.push(100);
+// carMakers1.push(100); // will show error
 
 // help with map, reduce, forEach
 carMakers1.map((car: string): string => {
   return car;
 })
+
+// flexible types
+const importantDates = [new Date(), '2030-1-10'];
+const importantDates2: (string | Date)[] = [new Date()];
+
+importantDates2.push('2020-5-2');
+importantDates2.push(new Date);
+// importantDates2.push(100); // will show error
