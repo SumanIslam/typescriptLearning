@@ -13,3 +13,10 @@ const tea: Drink = ['brown', false, 0];
 
 // pepsi[0] = 40; // will show error
 // pepsi[2] = 'brown'; // will show error
+
+const carSpecs: [number, number] = [400, 3354];
+
+const carState = {
+  horsePower: 400,
+  weight: 3354,
+}
