@@ -1,8 +1,14 @@
 class Vehicle {
+  constructor(private color: string) {}
+
   protected honk(): void {
     console.log('beep');
   }
 }
+
+const vehicle = new Vehicle('orange');
+console.log(vehicle.color);
+
 
 class Car extends Vehicle {
   private drive(): void {
@@ -15,7 +21,7 @@ class Car extends Vehicle {
   }
 }
 
-const car = new Car();
+// const car = new Car();
 
-car.startDrivingProcess();
-car.honk();
+// car.startDrivingProcess();
+// car.honk();
