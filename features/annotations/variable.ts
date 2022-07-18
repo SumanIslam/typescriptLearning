@@ -27,9 +27,8 @@ let point: {x: number; y: number} = {
 };
 
 // functions
-const logNumber: (i: number) => void = (i: number) => {
+const logNumber= (i: number): void => {
   console.log(i);
-  
 }
 
 // when to use type annotations

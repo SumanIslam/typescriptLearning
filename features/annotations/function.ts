@@ -18,9 +18,7 @@ const divide = function(a: number, b: number): number {
 
 const logger = (message: string): void => {
   console.log(message);
-  return null;
-  // if return type is void 
-  // then it can return "null" and "undefined"
+  // if return type is void then it can return "undefined" but can't return null
 }
 
 const throwError = (message: string): never => {
