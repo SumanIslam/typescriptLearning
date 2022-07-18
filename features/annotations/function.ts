@@ -39,9 +39,9 @@ const todaysWeather = {
   weather: 'sunny',
 };
 
-const logWeather = (forecasts: {date: Date, weather: string}): void => {
-  console.log(forecasts.date);
-  console.log(forecasts.weather);
+const logWeather = (forecast: { date: Date, weather: string }): void => {
+  console.log(forecast.date);
+  console.log(forecast.weather);
 }
 
 logWeather(todaysWeather);
