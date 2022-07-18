@@ -9,11 +9,6 @@ interface Todo {
 const API_URL = "https://jsonplaceholder.typicode.com/todos/1";
 
 axios.get(API_URL).then(response => {
-  // Response.data has some properties of:
-  // userId
-  // id
-  // title
-  // completed
   const todo = response.data as Todo;
 
 	const id = todo.id;
@@ -27,6 +22,6 @@ const logTodo = (id: number, title: string, completed: boolean) => {
   console.log(`
     The Todo with ID: ${id}
     Has a title of: ${title}
-    Is it finished? ${completed}
+    Is it Completed? ${completed}
   `);
 }
