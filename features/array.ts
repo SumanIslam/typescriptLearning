@@ -6,19 +6,20 @@ const dates = [new Date(), new Date()];
 const carsByMake = [["f150"], ["corolla"], ["camaro"]];
 const carsByMake2: string[][] = [];
 
-// help wit inference when extracting values
+// use cases
+// 1. help with inference when extracting values
 const car = carMakers1[0];
 const myCar = carMakers1.pop();
 
-// prevent adding incompatible values to array
+// 2. prevent adding incompatible values to array
 // carMakers1.push(100); // will show error
 
-// help with map, reduce, forEach
+// 3. help with map, reduce, forEach
 carMakers1.map((car: string): string => {
   return car;
 })
 
-// flexible types
+// 4. flexible types
 const importantDates = [new Date(), '2030-1-10'];
 const importantDates2: (string | Date)[] = [new Date()];
 
