@@ -4,6 +4,7 @@ const drink = {
   sugar: 40,
 }
 
+// type alias
 type Drink = [string, boolean, number]
 
 // tuple
@@ -16,7 +17,7 @@ const tea: Drink = ['brown', false, 0];
 
 const carSpecs: [number, number] = [400, 3354];
 
-const carState = {
+const carStats = {
   horsePower: 400,
   weight: 3354,
 }
