@@ -15,15 +15,21 @@ const oldCivic = {
 };
 
 // will generate error because broken property is not available
-// const oldCivic2 = {
-//   name: 'civic',
-//   year: 2000,
-//   isBroken: true,  
-// };
+const oldCivic2 = {
+  name: 'civic',
+  year: 2000,
+  isBroken: true,  
+};
 
-const printVehicle = (vehicle: Vehicle): void => {
-  console.log(vehicle.summary());
+const printVehicle = (vehicle: { name: string; year: Number; isBroken: Boolean }): void => {
+  // console.log(vehicle.summary());
+  console.log(`
+    Name: ${vehicle.name}
+    Year: ${vehicle.year}
+    Broken? ${vehicle.isBroken}
+  `);
+  
   
 }
 
-printVehicle(oldCivic);
+printVehicle(oldCivic2);
