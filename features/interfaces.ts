@@ -46,18 +46,23 @@ const oldCivic2 = {
 	broken: true,
 };
 
-const printVehicle = (vehicle: Vehicle2): void => {
-	console.log(`
-    Name: ${vehicle.name}
-    Year: ${vehicle.year}
-    Broken? ${vehicle.broken}
-  `);
-};
+// const printVehicle = (vehicle: Vehicle2): void => {
+// 	console.log(`
+//     Name: ${vehicle.name}
+//     Year: ${vehicle.year}
+//     Broken? ${vehicle.broken}
+//   `);
+// };
 
-printVehicle(oldCivic2);
+// printVehicle(oldCivic2);
 
+interface Vehicle3 {
+	name: string;
+	year: Date;
+	broken: boolean;
+	summary(): string;
+}
 
-// will generate error because broken property is not available
 const oldCivic3 = {
 	name: 'civic',
 	year: new Date(),
@@ -66,3 +71,9 @@ const oldCivic3 = {
 		return `Name: ${this.name}`;
 	},
 };
+
+const printVehicle = (vehicle: Vehicle3): void => {
+	console.log(vehicle.summary());
+};
+
+printVehicle(oldCivic3);
