@@ -2,8 +2,14 @@
 const btn = document.getElementById('btn');
 const input = document.getElementById('todoinput');
 const form = document.querySelector('form');
-const list = document.getElementById("todolist");
-const todos = [];
+const list = document.getElementById('todolist');
+const todos = readTodos();
+function readTodos() {
+    const todosJSON = localStorage.getItem('todos');
+    if (todosJSON === null)
+        return [];
+    return JSON.parse(todosJSON);
+}
 function createTodo(todo) {
     const newLI = document.createElement('li');
     const checkbox = document.createElement('input');
@@ -21,10 +27,7 @@ function handleSubmit(e) {
     };
     createTodo(newTodo);
     todos.push(newTodo);
-    input.value = "";
+    localStorage.setItem('todos', JSON.stringify(todos));
+    input.value = '';
 }
 form.addEventListener('submit', handleSubmit);
-// btn.addEventListener('click', function () {
-// 	alert(input.value);
-// 	input.value = '';
-// });
