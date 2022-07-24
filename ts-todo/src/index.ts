@@ -9,8 +9,12 @@ const list = document.getElementById("todolist")!;
 function handleSubmit(e: SubmitEvent) {
 	e.preventDefault();
 	const newTodoText = input.value;
-	const newLI = document.createElement("LI");
+	const newLI = document.createElement("li");
+	const checkbox = document.createElement("input");
+	checkbox.type = "checkbox";
+	checkbox.checked = true;
 	newLI.append(newTodoText);
+	newLI.append(checkbox);
 	list.append(newLI);
 
 	input.value = "";
