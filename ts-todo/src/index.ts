@@ -4,9 +4,16 @@ const input = document.getElementById('todoinput')! as HTMLInputElement;
 
 const form = document.querySelector('form')!;
 
+const list = document.getElementById("todolist")!;
+
 function handleSubmit(e: SubmitEvent) {
 	e.preventDefault();
-	console.log('submitted!');
+	const newTodoText = input.value;
+	const newLI = document.createElement("LI");
+	newLI.append(newTodoText);
+	list.append(newLI);
+
+	input.value = "";
 }
 
 form.addEventListener('submit', handleSubmit);
