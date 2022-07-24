@@ -4,6 +4,9 @@ const input = document.getElementById('todoinput');
 const form = document.querySelector('form');
 const list = document.getElementById('todolist');
 const todos = readTodos();
+todos.forEach(todo => {
+    createTodo(todo);
+});
 function readTodos() {
     const todosJSON = localStorage.getItem('todos');
     if (todosJSON === null)

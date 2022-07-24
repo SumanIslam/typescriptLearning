@@ -12,6 +12,9 @@ interface Todo {
 }
 
 const todos: Todo[] = readTodos();
+todos.forEach(todo => {
+	createTodo(todo);
+})
 
 function readTodos(): Todo[] {
 	const todosJSON = localStorage.getItem('todos');
