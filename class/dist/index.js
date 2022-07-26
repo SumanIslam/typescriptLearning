@@ -9,4 +9,4 @@ var Player = /** @class */ (function () {
 }());
 var elton = new Player("Elton", "Steele");
 console.log(elton);
-// elton.first = 'suman'
+// elton.score
