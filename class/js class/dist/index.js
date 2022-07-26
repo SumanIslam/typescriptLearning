@@ -34,9 +34,13 @@ class Player {
 
 class AdminPlayer extends Player {
   isAdmin = true;
+  constructor(powers, first, last) {
+    super(first, last);
+    this.powers = powers;
+  }
 }
 
-const admin = new AdminPlayer();
+const admin = new AdminPlayer(["delete", "restore world"], "admin", "mcadian");
 console.log(admin);
 
 const player1 = new Player("Suman", "Islam");
