@@ -55,8 +55,23 @@ var SuperPlayer = /** @class */ (function (_super) {
     return SuperPlayer;
 }(Player));
 var elton = new Player("Elton", "Steele");
-console.log(elton);
-console.log(elton.fullName);
-console.log(elton.score);
-elton.score = 23;
-console.log(elton.score);
+var Bike = /** @class */ (function () {
+    function Bike(color) {
+        this.color = color;
+    }
+    return Bike;
+}());
+var Jacket = /** @class */ (function () {
+    function Jacket(brand, color) {
+        this.brand = brand;
+        this.color = color;
+    }
+    Jacket.prototype.print = function () {
+        console.log("".concat(this.color, " ").concat(this.brand, " jacket"));
+    };
+    return Jacket;
+}());
+var bike1 = new Bike('red');
+var jacket1 = new Jacket('Prada', 'black');
+console.log(bike1, jacket1);
+jacket1.print();
