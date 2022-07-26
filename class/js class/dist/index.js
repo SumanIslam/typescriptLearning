@@ -11,6 +11,12 @@ class Player {
   getScore() {
     return this.#score;
   }
+  set score(newScore) {
+    if(newScore < 0) {
+      throw new Error("Score Must be positive");
+    }
+    this.#score = newScore;
+  }
   updateScore(newScore) {
     return this.#score = newScore;
   }
@@ -31,10 +37,10 @@ const player1 = new Player("Suman", "Islam");
 // console.log(player1.numLives);
 // player1.loseLife();
 // console.log(player1.numLives);
-// console.log(player1.getScore());
-// console.log(player1.updateScore(28));
-// console.log(player1.getScore());
-console.log(player1.fullName);
+console.log(player1.getScore());
+player1.score = 23;
+console.log(player1.getScore());
+// console.log(player1.fullName);
 
 // const player2 = new Player("Charlie", "brown");
 // player2.taunt();
