@@ -54,7 +54,7 @@ var SuperPlayer = /** @class */ (function (_super) {
     };
     return SuperPlayer;
 }(Player));
-var elton = new Player("Elton", "Steele");
+var elton = new Player('Elton', 'Steele');
 var Bike = /** @class */ (function () {
     function Bike(color) {
         this.color = color;
@@ -73,5 +73,44 @@ var Jacket = /** @class */ (function () {
 }());
 var bike1 = new Bike('red');
 var jacket1 = new Jacket('Prada', 'black');
-console.log(bike1, jacket1);
-jacket1.print();
+// console.log(bike1, jacket1);
+// jacket1.print();
+var Employee = /** @class */ (function () {
+    function Employee(first, last) {
+        this.first = first;
+        this.last = last;
+    }
+    Employee.prototype.greed = function () {
+        console.log('Hello');
+    };
+    return Employee;
+}());
+var FullTimeEmployee = /** @class */ (function (_super) {
+    __extends(FullTimeEmployee, _super);
+    function FullTimeEmployee(first, last, salary) {
+        var _this = _super.call(this, first, last) || this;
+        _this.salary = salary;
+        return _this;
+    }
+    FullTimeEmployee.prototype.getPay = function () {
+        return this.salary;
+    };
+    return FullTimeEmployee;
+}(Employee));
+var PartTimeEmployee = /** @class */ (function (_super) {
+    __extends(PartTimeEmployee, _super);
+    function PartTimeEmployee(first, last, hourlyRate, hoursWorked) {
+        var _this = _super.call(this, first, last) || this;
+        _this.hourlyRate = hourlyRate;
+        _this.hoursWorked = hoursWorked;
+        return _this;
+    }
+    PartTimeEmployee.prototype.getPay = function () {
+        return this.hourlyRate * this.hoursWorked;
+    };
+    return PartTimeEmployee;
+}(Employee));
+var betty = new FullTimeEmployee('Betty', "white", 95000);
+var bill = new PartTimeEmployee('Bill', "steele", 24, 1100);
+console.log(betty.getPay());
+console.log(bill.getPay());
