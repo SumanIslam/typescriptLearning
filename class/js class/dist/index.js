@@ -32,14 +32,20 @@ class Player {
   }
 }
 
+class AdminPlayer extends Player {
+  isAdmin = true;
+}
+
+const admin = new AdminPlayer();
+console.log(admin);
 
 const player1 = new Player("Suman", "Islam");
 // player1.taunt();
 // console.log(player1.first);
 // console.log(player1.last);
-console.log(player1);
-console.log(Player.description);
-console.log(Player.randomPlayer());
+// console.log(player1);
+// console.log(Player.description);
+// console.log(Player.randomPlayer());
 // console.log(player1.numLives);
 // player1.loseLife();
 // console.log(player1.numLives);
