@@ -1,5 +1,5 @@
 class Player {
-  private _score: number = 0;
+  protected _score: number = 0;
 
   constructor(public first: string, public last: string) {}
 
@@ -16,6 +16,13 @@ class Player {
       throw new Error('Score can not be negative')
     }
     this._score = newScore;
+  }
+}
+
+class SuperPlayer extends Player {
+  public admin: boolean = true;
+  maxScore() {
+    this._score = 999;
   }
 }
 
