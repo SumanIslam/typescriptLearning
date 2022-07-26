@@ -5,6 +5,9 @@ class Player {
     this.first = first;
     this.last = last;
   }
+  get fullName() {
+    return `${this.first} ${this.last}`
+  }
   getScore() {
     return this.#score;
   }
@@ -28,9 +31,10 @@ const player1 = new Player("Suman", "Islam");
 // console.log(player1.numLives);
 // player1.loseLife();
 // console.log(player1.numLives);
-console.log(player1.getScore());
-console.log(player1.updateScore(28));
-console.log(player1.getScore());
+// console.log(player1.getScore());
+// console.log(player1.updateScore(28));
+// console.log(player1.getScore());
+console.log(player1.fullName);
 
 // const player2 = new Player("Charlie", "brown");
 // player2.taunt();
