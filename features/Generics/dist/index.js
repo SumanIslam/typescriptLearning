@@ -22,6 +22,12 @@ function booleanIdentity(item) {
 function identity(item) {
     return item;
 }
-identity(7);
-identity("suman");
-identity({ name: "Montu", breed: 'asd' });
+// identity<number>(7);
+// identity<string>("suman");
+// identity<Cat>({name: "Montu", breed: 'asd'});
+function getRandomElement(list) {
+    var randomIndex = Math.floor(Math.random() * list.length);
+    return list[randomIndex];
+}
+console.log(getRandomElement(['suman', 'islam']));
+console.log(getRandomElement([1, 2, 3, 4, 5, 6, 7, 9]));

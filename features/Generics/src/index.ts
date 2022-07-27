@@ -38,6 +38,14 @@ function identity<T>(item: T): T {
   return item;
 }
 
-identity<number>(7);
-identity<string>("suman");
-identity<Cat>({name: "Montu", breed: 'asd'});
+// identity<number>(7);
+// identity<string>("suman");
+// identity<Cat>({name: "Montu", breed: 'asd'});
+
+function getRandomElement<T>(list: T[]): T {
+  const randomIndex = Math.floor(Math.random() * list.length);
+  return list[randomIndex];
+}
+
+console.log(getRandomElement<string>(['suman', 'islam']));
+console.log(getRandomElement<number>([1, 2,3,4,5,6,7,9]));
