@@ -60,7 +60,7 @@ function merge<T extends object, U extends object>(object1: T, object2: U) {
 
 const comboObj = merge({ name: 'colt' }, { pets: ['blue', 'elton'] });
 
-console.log(merge({ name: 'colt' }, { num: 9 }));
+// console.log(merge({ name: 'colt' }, { num: 9 }));
 
 // merge<{ name: string }, { pets: string[] }>(
 // 	{ name: 'colt' },
@@ -76,5 +76,13 @@ function printDoubleLength<T extends Lengthy>(thing: T): number {
   return thing.length * 2;
 }
 
-console.log(printDoubleLength('asdb'));
+// console.log(printDoubleLength('asdb'));
 // console.log(printDoubleLength(2342354));
+
+function makeEmptyArray<T = number>(): T[] {
+  return [];
+};
+
+const numbers = makeEmptyArray();
+const bools = makeEmptyArray<boolean>();
+// console.log(strings);
