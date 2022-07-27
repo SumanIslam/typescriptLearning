@@ -26,4 +26,12 @@ const printLetters = (word?: string) => {
   }
 }
 
-printLetters()
+printLetters("SUMAN")
+
+function someDemo(x: string | number, y: string | boolean) {
+  if(x === y) {
+    console.log(x.toUpperCase());
+  }
+}
+
+someDemo("x", "x");

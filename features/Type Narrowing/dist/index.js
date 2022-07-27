@@ -24,4 +24,10 @@ var printLetters = function (word) {
         console.log("You did not pass a word.");
     }
 };
-printLetters();
+printLetters("SUMAN");
+function someDemo(x, y) {
+    if (x === y) {
+        console.log(x.toUpperCase());
+    }
+}
+someDemo("x", "x");
