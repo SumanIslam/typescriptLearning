@@ -51,7 +51,7 @@ console.log(getRandomElement<number>([1, 2, 3, 4, 5, 6, 7, 9]));
 
 getRandomElement(['a', 'n']); // inferred Generic
 
-function merge<T, U>(object1: T, object2: U) {
+function merge<T extends object, U extends object>(object1: T, object2: U) {
 	return {
 		...object1,
 		...object2,
@@ -60,7 +60,21 @@ function merge<T, U>(object1: T, object2: U) {
 
 const comboObj = merge({ name: 'colt' }, { pets: ['blue', 'elton'] });
 
+console.log(merge({ name: 'colt' }, { num: 9 }));
+
 // merge<{ name: string }, { pets: string[] }>(
 // 	{ name: 'colt' },
 // 	{ pets: ['blue', 'elton'] }
 // );
+
+
+interface Lengthy {
+  length: number;
+}
+
+function printDoubleLength<T extends Lengthy>(thing: T): number {
+  return thing.length * 2;
+}
+
+console.log(printDoubleLength('asdb'));
+// console.log(printDoubleLength(2342354));
