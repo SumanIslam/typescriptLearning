@@ -49,3 +49,5 @@ function getRandomElement<T>(list: T[]): T {
 
 console.log(getRandomElement<string>(['suman', 'islam']));
 console.log(getRandomElement<number>([1, 2,3,4,5,6,7,9]));
+
+getRandomElement(["a", "n"]) // inferred Generic

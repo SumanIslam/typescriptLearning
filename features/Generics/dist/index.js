@@ -31,3 +31,4 @@ function getRandomElement(list) {
 }
 console.log(getRandomElement(['suman', 'islam']));
 console.log(getRandomElement([1, 2, 3, 4, 5, 6, 7, 9]));
+getRandomElement(["a", "n"]); // inferred Generic
