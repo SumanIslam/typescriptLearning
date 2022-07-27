@@ -1,28 +1,27 @@
 function doThing(thing: number | string): number | string {
-  return 0;
+	return 0;
 }
 
 // const nums: number[] = []
 const nums: Array<number> = [];
-const colors: Array<string> = []
+const colors: Array<string> = [];
 
 const inputEl = document.querySelector<HTMLInputElement>('#username')!;
 // console.dir(inputEl);
 // console.log(inputEl.value);
 
-const btn = document.querySelector<HTMLButtonElement>(".btn")!;
+const btn = document.querySelector<HTMLButtonElement>('.btn')!;
 
 // console.log(btn);
 
-
 function numberIdentity(item: number): number {
-  return item;
+	return item;
 }
 function stringIdentity(item: string): string {
-  return item;
+	return item;
 }
 function booleanIdentity(item: boolean): boolean {
-  return item;
+	return item;
 }
 
 // function identity(item: any): any {
@@ -30,12 +29,12 @@ function booleanIdentity(item: boolean): boolean {
 // }
 
 interface Cat {
-  name: string;
-  breed: string;
+	name: string;
+	breed: string;
 }
 
 function identity<T>(item: T): T {
-  return item;
+	return item;
 }
 
 // identity<number>(7);
@@ -43,11 +42,25 @@ function identity<T>(item: T): T {
 // identity<Cat>({name: "Montu", breed: 'asd'});
 
 function getRandomElement<T>(list: T[]): T {
-  const randomIndex = Math.floor(Math.random() * list.length);
-  return list[randomIndex];
+	const randomIndex = Math.floor(Math.random() * list.length);
+	return list[randomIndex];
 }
 
 console.log(getRandomElement<string>(['suman', 'islam']));
-console.log(getRandomElement<number>([1, 2,3,4,5,6,7,9]));
+console.log(getRandomElement<number>([1, 2, 3, 4, 5, 6, 7, 9]));
 
-getRandomElement(["a", "n"]) // inferred Generic
+getRandomElement(['a', 'n']); // inferred Generic
+
+function merge<T, U>(object1: T, object2: U) {
+	return {
+		...object1,
+		...object2,
+	};
+}
+
+const comboObj = merge({ name: 'colt' }, { pets: ['blue', 'elton'] });
+
+// merge<{ name: string }, { pets: string[] }>(
+// 	{ name: 'colt' },
+// 	{ pets: ['blue', 'elton'] }
+// );
