@@ -58,4 +58,22 @@ function makeEmptyArray() {
 ;
 var numbers = makeEmptyArray();
 var bools = makeEmptyArray();
-// console.log(strings);
+// class VideoPlaylist {
+//   public videos: Video[] = []
+// }
+// class SongPlaylist {
+//   public songs: Song[] = []
+// }
+var Playlist = /** @class */ (function () {
+    function Playlist() {
+        this.queue = [];
+    }
+    Playlist.prototype.add = function (el) {
+        this.queue.push(el);
+    };
+    return Playlist;
+}());
+var songs = new Playlist();
+// songs.add()
+var videos = new Playlist();
+// songs.add() 
