@@ -9,29 +9,49 @@ triple(9);
 
 const el = document.getElementById('idk');
 
-if(el) {
-  el
+if (el) {
+	el;
 } else {
-  el
+	el;
 }
 
 const printLetters = (word?: string) => {
-  if(word) {
-    for (const char of word) {
-      console.log(char);
-    }
-  } else {
-    console.log("You did not pass a word.");
-    
-  }
-}
+	if (word) {
+		for (const char of word) {
+			console.log(char);
+		}
+	} else {
+		console.log('You did not pass a word.');
+	}
+};
 
-printLetters("SUMAN")
+printLetters('SUMAN');
 
 function someDemo(x: string | number, y: string | boolean) {
-  if(x === y) {
-    console.log(x.toUpperCase());
-  }
+	if (x === y) {
+		console.log(x.toUpperCase());
+	}
 }
 
-someDemo("x", "x");
+someDemo('x', 'x');
+
+interface Movie {
+	title: string;
+	duration: number;
+}
+
+interface TVShow {
+	title: string;
+	numOfEpisode: number;
+	episodeDuration: number;
+}
+
+function getRuntime(media: Movie | TVShow) {
+	if ('numOfEpisode' in media) {
+		return media.numOfEpisode * media.episodeDuration;
+	}
+	return media.duration;
+}
+
+console.log(getRuntime({ title: 'amadeus', duration: 145 }));
+console.log(getRuntime({ title: 'spongebob', numOfEpisode: 80, episodeDuration: 145 }));

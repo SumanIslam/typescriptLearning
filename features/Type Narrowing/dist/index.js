@@ -21,13 +21,21 @@ var printLetters = function (word) {
         }
     }
     else {
-        console.log("You did not pass a word.");
+        console.log('You did not pass a word.');
     }
 };
-printLetters("SUMAN");
+printLetters('SUMAN');
 function someDemo(x, y) {
     if (x === y) {
         console.log(x.toUpperCase());
     }
 }
-someDemo("x", "x");
+someDemo('x', 'x');
+function getRuntime(media) {
+    if ('numOfEpisode' in media) {
+        return media.numOfEpisode * media.episodeDuration;
+    }
+    return media.duration;
+}
+console.log(getRuntime({ title: 'amadeus', duration: 145 }));
+console.log(getRuntime({ title: 'spongebob', numOfEpisode: 80, episodeDuration: 145 }));
