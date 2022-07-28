@@ -73,10 +73,27 @@ function isCat(animal) {
 function makeNoise(animal) {
     if (isCat(animal)) {
         animal;
-        return "Meow";
+        return 'Meow';
     }
     else {
         animal;
-        return "Gheow Gheow";
+        return 'Gheow Gheow';
     }
 }
+function getFarmAnimalSound(animal) {
+    switch (animal.kind) {
+        case ("pig"):
+            return "Oink";
+        case ("cow"):
+            return "Moooo!";
+        case ("rooster"):
+            return "cokadoodledooo";
+    }
+}
+var stevie = {
+    name: "Stevie Chicks",
+    weight: 2,
+    age: 1.5,
+    kind: "rooster"
+};
+console.log(getFarmAnimalSound(stevie));

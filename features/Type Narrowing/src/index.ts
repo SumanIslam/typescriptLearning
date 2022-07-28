@@ -95,15 +95,60 @@ interface Dog {
 }
 
 function isCat(animal: Cat | Dog): animal is Cat {
-  return (animal as Cat).numLives !== undefined; 
+	return (animal as Cat).numLives !== undefined;
 }
 
 function makeNoise(animal: Cat | Dog): string {
-  if(isCat(animal)) {
-    animal
-    return "Meow"
-  } else {
-    animal
-    return "Gheow Gheow"
+	if (isCat(animal)) {
+		animal;
+		return 'Meow';
+	} else {
+		animal;
+		return 'Gheow Gheow';
+	}
+}
+
+// Discriminated Unions
+
+interface Rooster {
+  kind: "rooster"
+	name: string;
+	weight: number;
+	age: number;
+}
+
+interface Cow {
+	kind: 'cow';
+	name: string;
+	weight: number;
+	age: number;
+}
+
+interface Pig {
+	kind: 'pig';
+	name: string;
+	weight: number;
+	age: number;
+}
+
+type FarmAnimal = Pig | Rooster | Cow
+
+function getFarmAnimalSound(animal: FarmAnimal) {
+  switch(animal.kind) {
+    case("pig"):
+      return "Oink";
+    case("cow"):
+      return "Moooo!";
+    case("rooster"):
+      return "cokadoodledooo"
   }
 }
+
+const stevie: Rooster = {
+  name: "Stevie Chicks",
+  weight: 2,
+  age: 1.5,
+  kind: "rooster"
+}
+
+console.log(getFarmAnimalSound(stevie));
