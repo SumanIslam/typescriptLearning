@@ -82,18 +82,24 @@ function makeNoise(animal) {
 }
 function getFarmAnimalSound(animal) {
     switch (animal.kind) {
-        case ("pig"):
-            return "Oink";
-        case ("cow"):
-            return "Moooo!";
-        case ("rooster"):
-            return "cokadoodledooo";
+        case 'pig':
+            return 'Oink';
+        case 'cow':
+            return 'Moooo!';
+        case 'rooster':
+            return 'cokadoodledooo';
+        case 'sheep':
+            return "Baaa!";
+        default:
+            // we should never make it here if we handled all the case correctly
+            var _exhaustiveCheck = animal;
+            return _exhaustiveCheck;
     }
 }
 var stevie = {
-    name: "Stevie Chicks",
+    name: 'Stevie Chicks',
     weight: 2,
     age: 1.5,
-    kind: "rooster"
+    kind: 'rooster',
 };
 console.log(getFarmAnimalSound(stevie));
