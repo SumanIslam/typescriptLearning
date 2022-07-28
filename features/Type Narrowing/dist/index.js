@@ -39,3 +39,31 @@ function getRuntime(media) {
 }
 console.log(getRuntime({ title: 'amadeus', duration: 145 }));
 console.log(getRuntime({ title: 'spongebob', numOfEpisode: 80, episodeDuration: 145 }));
+function printFullDate(date) {
+    if (date instanceof Date) {
+        console.log(date.toUTCString());
+    }
+    else {
+        console.log(new Date(date).toUTCString());
+    }
+}
+var User = /** @class */ (function () {
+    function User(username) {
+        this.username = username;
+    }
+    return User;
+}());
+var Company = /** @class */ (function () {
+    function Company(companyName) {
+        this.companyName = companyName;
+    }
+    return Company;
+}());
+function printName(entity) {
+    if (entity instanceof User) {
+        entity;
+    }
+    else {
+        entity;
+    }
+}

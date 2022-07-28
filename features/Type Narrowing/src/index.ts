@@ -55,3 +55,28 @@ function getRuntime(media: Movie | TVShow) {
 
 console.log(getRuntime({ title: 'amadeus', duration: 145 }));
 console.log(getRuntime({ title: 'spongebob', numOfEpisode: 80, episodeDuration: 145 }));
+
+
+function printFullDate(date: string | Date) {
+  if(date instanceof Date) {
+    console.log(date.toUTCString());
+  } else {
+    console.log(new Date(date).toUTCString());
+  }
+}
+
+class User {
+  constructor(public username: string) {}
+}
+
+class Company {
+  constructor(public companyName: string){}
+}
+
+function printName(entity: User | Company) {
+  if(entity instanceof User) {
+    entity
+  } else {
+    entity
+  }
+}
