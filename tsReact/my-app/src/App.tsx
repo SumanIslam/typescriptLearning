@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import ShoppingList from './components/ShoppingList';
 import Item from './models/item';
+import ShoppingListForm from './components/shoppingListForm';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
 	return (
 		<div>
 			<ShoppingList items = {items}/>
+			<ShoppingListForm />
 		</div>
 	);
 }
