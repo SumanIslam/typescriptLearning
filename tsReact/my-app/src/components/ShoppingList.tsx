@@ -1,12 +1,7 @@
-import React from "react";
+import Item from '../models/item';
 
-interface Item {
-  id: number;
-  product: string;
-  quantity: number;
-}
 interface ShoppingListProps {
-  items: Item[]
+	items: Item[];
 }
 
 function ShoppingList({ items }: ShoppingListProps): JSX.Element {
@@ -14,11 +9,11 @@ function ShoppingList({ items }: ShoppingListProps): JSX.Element {
 		<div>
 			<h1>Shopping List</h1>
 			<ul>
-				{
-          items.map((item) => (
-            <li key={item.id}>{item.product} - {item.quantity}</li>
-          ))
-        }
+				{items.map((item) => (
+					<li key={item.id}>
+						{item.product} - {item.quantity}
+					</li>
+				))}
 			</ul>
 		</div>
 	);
